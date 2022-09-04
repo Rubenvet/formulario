@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <h1>Mis forms</h1>
+    <form action="/ruben" id="form">
+        Nombre: <input type="text" id="nombre"> <br /> <br />
+        Nombre de Mascota:<input type="text" id="nombreDeMascota">
+        <br /> <br />
+        Especie: <input type="checkbox" id="perro" value="perro">
+        <label for="perro">Perro</label>
+        <input type="checkbox" id="gato" value="gato">
+        <label for="gato">Gato</label>
+        <br /> <br />
+        Edad: <select id="edad">
+            <option value="0-2">0-2 años</option>
+            <option value="2-5">2-5 años</option>
+            <option value="5-8">5-8 años</option>
+            <option value="8-12">8-12 años</option>
+            <option value="+12">+12 años</option>
+            <select /><br /> <br />
+            Direccion: <input type="text">
+            <br /> <br />
+            <textarea placeholder="Comentario" rows="4" cols="50"></textarea>
+            <br /> <br />
+            <button>Enviar</button>
+            <h2> Datos de Registro </h2>
+            <ul id="datos"></ul>
+    </form>
+    <script src="app.js"></script>
+</body>
+
+</html>
