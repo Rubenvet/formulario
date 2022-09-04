@@ -25,14 +25,17 @@
             <option value="5-8">5-8 años</option>
             <option value="8-12">8-12 años</option>
             <option value="+12">+12 años</option>
-            <select /><br /> <br />
-            Direccion: <input type="text">
+            <select />
             <br /> <br />
-            <textarea placeholder="Comentario" rows="4" cols="50"></textarea>
+            Direccion: <input type="text" id="direccion" value="address">
+            <br /> <br />
+            <textarea placeholder="Comentario" rows="4" cols="50" value="comment" id="comment"></textarea>
             <br /> <br />
             <button>Enviar</button>
             <h2> Datos de Registro </h2>
             <ul id="datos"></ul>
+            <ul id="com"></ul>
+            <ul id="dom"></ul>
     </form>
     <script src="app.js"></script>
 </body>
