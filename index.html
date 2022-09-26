@@ -13,21 +13,22 @@
 
 <body>
     <div id="container">
-        <form action="/ruben" id="form">
+        <form action="/ruben" id="form" class="form">
             <h2>Mis forms</h2>
             <div id="names">
-                <input class="btn btn-info"  name="reset" type="reset" id="reset">
-                Nombre: <input type="text" id="nombre">
+                <input class="btn btn-info" name="reset" type="reset" id="reset">
+                Nombre: <input name="Nombre" type="text" id="nombre">
                 <br /> <br />
-                Nombre de Mascota:<input type="text" id="nombreDeMascota">
+                Nombre de Mascota:<input name="nombreDeMascota" type="text" id="nombreDeMascota">
                 <br /> <br />
             </div>
-            Especie: <input type="checkbox" id="perro" value="perro">
-            <label for="perro">Perro</label>
-            <input type="checkbox" id="gato" value="gato">
+            Especie: <input name="perro" type="checkbox" id="perro" value="perro">
+            <label for="perro">
+                Perro</label>
+            <input name="gato" type="checkbox" id="gato" value="gato">
             <label for="gato">Gato</label>
             <br /> <br />
-            Edad: <select id="edad">
+            Edad: <select name="edad" id="edad">
                 <option value="0-2">0-2 años</option>
                 <option value="2-5">2-5 años</option>
                 <option value="5-8">5-8 años</option>
@@ -35,12 +36,12 @@
                 <option value="+12">+12 años</option>
                 <select />
                 <br /> <br />
-                Direccion: <input type="text" id="direccion" value="">
+                Direccion: <input name="direccion" type="text" id="direccion" value="">
                 <br /> <br />
-                <textarea placeholder="Comentario" rows="4" cols="50" value="comment" id="comment"></textarea>
+                <textarea name="comentario"placeholder="Comentario" rows="4" cols="50" value="comment" id="comment"></textarea>
                 <br /> <br />
                 <div id="botones">
-                    <button class="btn btn-info" id="enviar">Enviar</button>
+                    <button type="submit" class="btn btn-info" id="enviar">Enviar</button>
                     <button class="btn btn-danger" id="limpiar"> Limpiar datos</button>
                 </div>
                 <h2> Datos de Registro </h2>

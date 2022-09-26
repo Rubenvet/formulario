@@ -22,6 +22,20 @@ enviar.addEventListener("click", function (e) {
     const domi = direccion.value;
     nuevosDatos(idCliente, idMascota, age, comment, domi);
 
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+
+    fetch('https://reqres.in/api/users', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    }).then(res => res.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
+
 })
 
 
@@ -29,9 +43,9 @@ enviar.addEventListener("click", function (e) {
 const nuevosDatos = (idCliente, idMascota, age, comment, domi) => {
     const newLI = document.createElement("li");
     const newCo = document.createElement("li");
-    const newDo = document. createElement("li");
+    const newDo = document.createElement("li");
 
-    newLI.innerText =  "Nombre de usuario: " + idCliente + " " + "Nombre de Mascota: " + idMascota + " " + "Edad: " + age ;
+    newLI.innerText = "Nombre de usuario: " + idCliente + " " + "Nombre de Mascota: " + idMascota + " " + "Edad: " + age;
     newCo.innerText = "Comentario: " + " " + comment;
     newDo.innerText = "Direccion:" + " " + domi;
 
@@ -43,6 +57,29 @@ const nuevosDatos = (idCliente, idMascota, age, comment, domi) => {
 
 
 limpiar.addEventListener("click", (e) => {
-        e.preventDefault();
-        $('li').remove();
-    })
+    e.preventDefault();
+    $('li').remove();
+});
+
+// form.addEventListener("submit", e => {
+//     e.preventDefault();
+//     const formData = new FormData(form);
+//     const data = Object.fromEntries(formData);
+
+//     fetch('https://reqres.in/api/users', {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify(data)
+//     }).then(res => res.json())
+//         .then(data => console.log(data))
+//         .catch(error => console.log(error));
+// })
+
+
+
+
+
+
+
