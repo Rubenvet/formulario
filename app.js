@@ -7,6 +7,12 @@ const edad = document.querySelector("#edad");
 const limpiar = document.querySelector("#limpiar")
 const btn1 = document.querySelector("#btn1");
 const info = document.querySelector("#newInfo");
+const objeto = document.querySelector(".objeto");
+const form2 = document.querySelector("#form2");
+
+
+
+const text = document.querySelector(".objeto");
 
 const list = document.querySelector("#datos");
 const add = document.querySelector("#dom")
@@ -26,6 +32,8 @@ enviar.addEventListener("click", function (e) {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
 
+
+
     fetch('https://reqres.in/api/users', {
         method: "POST",
         headers: {
@@ -33,21 +41,22 @@ enviar.addEventListener("click", function (e) {
         },
         body: JSON.stringify(data)
     }).then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => console.log = data)
         .catch(error => console.log(error));
-
 })
 
 
 
-const nuevosDatos = (idCliente, idMascota, age, comment, domi) => {
+function nuevosDatos(idCliente, idMascota, age, comment, domi) {
     const newLI = document.createElement("li");
     const newCo = document.createElement("li");
     const newDo = document.createElement("li");
 
+
     newLI.innerText = "Nombre de usuario: " + idCliente + " " + "Nombre de Mascota: " + idMascota + " " + "Edad: " + age;
     newCo.innerText = "Comentario: " + " " + comment;
     newDo.innerText = "Direccion:" + " " + domi;
+
 
     list.append(newLI);
     com.append(newCo);
@@ -60,6 +69,17 @@ limpiar.addEventListener("click", (e) => {
     e.preventDefault();
     $('li').remove();
 });
+
+
+
+// form2.addEventListener("submit", (e) => {
+//     e.preventDefault();
+
+//     let objeto = document.getElementById(".objeto");
+//     let json = objeto.value;
+//     const obj = JSON.parse(json);
+//     console.log(obj.employees[0]);
+// })
 
 // form.addEventListener("submit", e => {
 //     e.preventDefault();
@@ -76,10 +96,3 @@ limpiar.addEventListener("click", (e) => {
 //         .then(data => console.log(data))
 //         .catch(error => console.log(error));
 // })
-
-
-
-
-
-
-
